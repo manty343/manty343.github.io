@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comentarios - Imprenta</title>
+    <link rel="stylesheet" type="text/css" href="../css/BarraBusqueda.css">
+    <link rel="stylesheet" type="text/css" href="../css/Carrito.css">
+    <script src="../js/comments.js" defer></script>
+</head>
+<body>
+    <div class="cart-page">
+        <header class="cart-header">
+            <div>
+                <h1>Comentarios y Sugerencias</h1>
+                <p>Déjanos tu opinión para mejorar nuestro servicio.</p>
+            </div>
+            <a class="cart-back" href="../index.html">← Volver a la tienda</a>
+        </header>
+
+        <section class="cart-content">
+            <div class="receipt-content">
+                <div class="order-card">
+                    <h2>Escribe un comentario</h2>
+                    <p>Tu feedback nos ayuda a mejorar.</p>
+                    <label for="comment-name">Nombre (opcional)</label>
+                    <input id="comment-name" type="text" placeholder="Tu nombre" />
+                    <label for="comment-text">Comentario</label>
+                    <textarea id="comment-text" rows="6" placeholder="Escribe aquí tu comentario..."></textarea>
+                    <button id="submit-comment" class="btn-cart">Enviar comentario</button>
+                    <p id="comment-success" class="empty-cart" style="display:none; margin-top: 10px; background:none; border:none; color: #1f7a1f;"></p>
+                </div>
+                <div class="order-card">
+                    <h2>Comentarios recientes</h2>
+                    <div id="comment-list" class="orders-list"></div>
+                </div>
+            </div>
+            <aside class="cart-summary">
+                <h2>Gracias por tu tiempo</h2>
+                <p>Tu comentario llegará directamente al equipo de administración.</p>
+                <p>Si estás registrado, tu correo quedará asociado al comentario.</p>
+            </aside>
+        </section>
+    </div>
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detalle del Producto</title>
+    <link rel="stylesheet" type="text/css" href="../css/BarraBusqueda.css">
+    <link rel="stylesheet" type="text/css" href="../css/Producto.css">
+    <script src="../js/Producto.js" defer></script>
+</head>
+<body>
+    <header class="topbar product-topbar">
+        <a class="topbar-action" href="../index.html">← Volver a la tienda</a>
+        <div class="topbar-search product-topbar-title">Detalle del Producto</div>
+        <a class="topbar-action cart-action" href="cart.html">Su Carrito <span id="cart-count">0</span></a>
+    </header>
+
+    <main class="product-page">
+        <section class="product-detail-card">
+            <div class="product-detail-image">
+                <img id="product-image" src="" alt="Producto">
+            </div>
+            <div class="product-detail-info">
+                <h1 id="product-title">Producto</h1>
+                <p id="product-description">Descripción del producto.</p>
+                <p class="product-detail-price">Precio: $<span id="product-price">0.00</span></p>
+                <div class="product-detail-colors">
+                    <span>Color:</span>
+                    <div id="color-options" class="color-options"></div>
+                </div>
+                <div class="product-detail-actions">
+                    <button id="add-to-cart" class="btn-cart">Agregar al carrito</button>
+                </div>
+            </div>
+        </section>
+        <section class="product-detail-description">
+            <h2>Características</h2>
+            <ul id="product-features"></ul>
+        </section>
+    </main>
+</body>
+</html>

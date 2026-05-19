@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Productos - Imprenta</title>
+    <link rel="stylesheet" type="text/css" href="../css/BarraBusqueda.css">
+    <link rel="stylesheet" type="text/css" href="../Home.css">
+    <script src="../js/ProductsPage.js" defer></script>
+</head>
+<body>
+    <div id="sidebar">
+        <ul>
+            <li><a href="../index.html">Inicio</a></li>
+            <li><a href="products.html">Productos</a></li>
+            <li><a href="cart.html">Carrito</a></li>
+            <li><a href="Formulario.html">Inicia Sesion</a></li>
+        </ul>
+    </div>
+    <header class="topbar">
+        <div class="topbar-menu"><img src="../Imagenes/barra_a_lateral.png" onclick="toggleSidebar()" alt="Menu" style="cursor:pointer;" width="40" height="40" margin="10px"></div>
+        <div class="topbar-brand">
+            <div class="brand-logo"><img src="../Imagenes/logo.jpg" height="80px" class="img-logo"></div>
+        </div>
+        <form class="topbar-search" onsubmit="return false;">
+            <input id="product-search" type="search" placeholder="Buscar producto...">
+            <button type="button" onclick="document.getElementById('product-search').dispatchEvent(new Event('input'))">BUSCAR</button>
+        </form>
+        <div class="topbar-actions">
+            <a id="billing-link" href="#" class="topbar-action">Facturacion</a>
+            <a href="comments.html" class="topbar-action">Comentarios</a>
+            <a href="cart.html" class="topbar-action cart-action">Su Carrito <span id="cart-count">0</span></a>
+        </div>
+    </header>
+
+    <main class="container" style="text-align: center; padding: 40px 20px;">
+        <section class="products-section" style="margin-bottom: 30px;">
+            <h2>Productos Disponibles</h2>
+            <p>Aqui se muestran todos los productos que estan disponibles en nuestra tienda.</p>
+        </section>
+        <div class="products-grid">
+            <div class="product-card">
+                <div class="product-image"><img src="../Imagenes/Camisa.jpeg" alt="Camisas con Estampado"></div>
+                <h3>Camisas con Estampado</h3>
+                <p class="description">Camisa de algodón con estampado único y personalizacion completa (la imagen es tu elección)</p>
+                <p class="price">$150</p>
+                <div class="product-buttons">
+                    <button class="btn-view" data-id="camisa">👁️</button>
+                    <button class="btn-cart" data-name="Camisas con Estampado" data-price="150" data-image="../Imagenes/Camisa.jpeg">🛒</button>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="product-image"><img src="../Imagenes/sudadera.jpeg" alt="Sudadera con Estampado"></div>
+                <h3>Sudadera con Estampado</h3>
+                <p class="description">Sudadera de lana con estampado único y personalizacion completa (la imagen es tu elección)</p>
+                <p class="price">$500</p>
+                <div class="product-buttons">
+                    <button class="btn-view" data-id="sudadera">👁️</button>
+                    <button class="btn-cart" data-name="Sudadera con Estampado" data-price="500" data-image="../Imagenes/sudadera.jpeg">🛒</button>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="product-image"><img src="../Imagenes/gorra.jpeg" alt="Gorra con Estampado"></div>
+                <h3>Gorra con Estampado</h3>
+                <p class="description">Gorra de algodón con estampado único y personalizacion completa (la imagen es tu elección)</p>
+                <p class="price">$100</p>
+                <div class="product-buttons">
+                    <button class="btn-view" data-id="gorra">👁️</button>
+                    <button class="btn-cart" data-name="Gorra con Estampado" data-price="100" data-image="../Imagenes/gorra.jpeg">🛒</button>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="product-image"><img src="../Imagenes/bandera.jpeg" alt="Bandera"></div>
+                <h3>Bandera</h3>
+                <p class="description">Bandera con estampado único y personalizacion completa (la imagen es tu elección)</p>
+                <p class="price">$200</p>
+                <div class="product-buttons">
+                    <button class="btn-view" data-id="bandera">👁️</button>
+                    <button class="btn-cart" data-name="Bandera" data-price="200" data-image="../Imagenes/bandera.jpeg">🛒</button>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="product-image"><img src="../Imagenes/chaquetamesqui.jpeg" alt="Chaqueta de Mesclilla"></div>
+                <h3>Chaqueta de Mesclilla</h3>
+                <p class="description">Chaquetas de mesquite con diseño único y personalización completa (la imagen es tu elección)</p>
+                <p class="price">$600</p>
+                <div class="product-buttons">
+                    <button class="btn-view" data-id="chaqueta">👁️</button>
+                    <button class="btn-cart" data-name="Chaqueta de Mesclilla" data-price="600" data-image="../Imagenes/chaquetamesqui.jpeg">🛒</button>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="product-image"><img src="../Imagenes/almohada.jpeg" alt="Almohada"></div>
+                <h3>Almohada</h3>
+                <p class="description">Almohada de alta calidad con diseño único y personalización completa (diseño es tu elección)</p>
+                <p class="price">$100</p>
+                <div class="product-buttons">
+                    <button class="btn-view" data-id="almohada">👁️</button>
+                    <button class="btn-cart" data-name="Almohada" data-price="100" data-image="../Imagenes/almohada.jpeg">🛒</button>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="product-image"><img src="../Imagenes/termo.jpeg" alt="Termo"></div>
+                <h3>Termo</h3>
+                <p class="description">Termo de acero inoxidable con estampado único y personalización completa (diseño es tu elección)</p>
+                <p class="price">$80</p>
+                <div class="product-buttons">
+                    <button class="btn-view" data-id="termo">👁️</button>
+                    <button class="btn-cart" data-name="Termo" data-price="80" data-image="../Imagenes/termo.jpeg">🛒</button>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="product-image"><img src="../Imagenes/Libreta.jpeg" alt="Libreta"></div>
+                <h3>Libreta</h3>
+                <p class="description">Libreta de calidad con diseño único y personalización completa (diseño es tu elección)</p>
+                <p class="price">$20</p>
+                <div class="product-buttons">
+                    <button class="btn-view" data-id="libreta">👁️</button>
+                    <button class="btn-cart" data-name="Libreta" data-price="20" data-image="../Imagenes/Libreta.jpeg">🛒</button>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="product-image"><img src="../Imagenes/bolsaspapel.jpg" alt="Bolsa de Papel"></div>
+                <h3>Bolsa de Papel</h3>
+                <p class="description">Bolsa de papel con impresión de tinta personalizada. Perfecta para empaques y regalos con diseño único</p>
+                <p class="price">$35</p>
+                <div class="product-buttons">
+                    <button class="btn-view" data-id="bolsapapel">👁️</button>
+                    <button class="btn-cart" data-name="Bolsa de Papel" data-price="35" data-image="../Imagenes/bolsaspapel.jpg">🛒</button>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="product-image"><img src="../Imagenes/bolsastela.jpg" alt="Bolsa de Tela"></div>
+                <h3>Bolsa de Tela</h3>
+                <p class="description">Bolsa tipo tela con impresión personalizada. Reutilizable y ecológica con tu diseño impreso</p>
+                <p class="price">$45</p>
+                <div class="product-buttons">
+                    <button class="btn-view" data-id="bolsatela">👁️</button>
+                    <button class="btn-cart" data-name="Bolsa de Tela" data-price="45" data-image="../Imagenes/bolsastela.jpg">🛒</button>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="product-image"><img src="../Imagenes/cartaspresentacion.jpg" alt="Cartas de Presentación"></div>
+                <h3>Cartas de Presentación</h3>
+                <p class="description">Cartas pequeñas con información de empresa o persona. Impresión por ambos lados con tu contenido personalizado</p>
+                <p class="price">$25</p>
+                <div class="product-buttons">
+                    <button class="btn-view" data-id="cartaspresentacion">👁️</button>
+                    <button class="btn-cart" data-name="Cartas de Presentación" data-price="25" data-image="../Imagenes/cartaspresentacion.jpg">🛒</button>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="product-image"><img src="../Imagenes/cascos.jpg" alt="Cascos de Construcción"></div>
+                <h3>Cascos de Construcción</h3>
+                <p class="description">Cascos de construcción con impresión personalizada. Seguridad con estilo y tu marca visible</p>
+                <p class="price">$120</p>
+                <div class="product-buttons">
+                    <button class="btn-view" data-id="cascos">👁️</button>
+                    <button class="btn-cart" data-name="Cascos de Construcción" data-price="120" data-image="../Imagenes/cascos.jpg">🛒</button>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="product-image"><img src="../Imagenes/cubrebocas.jpg" alt="Cubrebocas"></div>
+                <h3>Cubrebocas de Tela</h3>
+                <p class="description">Cubrebocas de tela con diseño personalizado. Cómodos, reutilizables y con tu patrón único impreso</p>
+                <p class="price">$15</p>
+                <div class="product-buttons">
+                    <button class="btn-view" data-id="cubrebocas">👁️</button>
+                    <button class="btn-cart" data-name="Cubrebocas de Tela" data-price="15" data-image="../Imagenes/cubrebocas.jpg">🛒</button>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="product-image"><img src="../Imagenes/mandil.jpg" alt="Mandil"></div>
+                <h3>Mandil de Cocina</h3>
+                <p class="description">Mandil tipo cocina con diseño o color personalizado. Resistente y funcional para profesionales y hogar</p>
+                <p class="price">$40</p>
+                <div class="product-buttons">
+                    <button class="btn-view" data-id="mandil">👁️</button>
+                    <button class="btn-cart" data-name="Mandil de Cocina" data-price="40" data-image="../Imagenes/mandil.jpg">🛒</button>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="product-image"><img src="../Imagenes/mochila.jpg" alt="Mochila"></div>
+                <h3>Mochila</h3>
+                <p class="description">Mochila de color con diseño impreso personalizado. Perfecta para estudiantes y viajeros con tu estilo</p>
+                <p class="price">$65</p>
+                <div class="product-buttons">
+                    <button class="btn-view" data-id="mochila">👁️</button>
+                    <button class="btn-cart" data-name="Mochila" data-price="65" data-image="../Imagenes/mochila.jpg">🛒</button>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="product-image"><img src="../Imagenes/notasnegocios.jpg" alt="Notas de Negocio"></div>
+                <h3>Notas de Negocio</h3>
+                <p class="description">Notas de papel para cierre de turno y apuntes de trabajadores. Impresión personalizada para tu empresa</p>
+                <p class="price">$18</p>
+                <div class="product-buttons">
+                    <button class="btn-view" data-id="notasnegocio">👁️</button>
+                    <button class="btn-cart" data-name="Notas de Negocio" data-price="18" data-image="../Imagenes/notasnegocios.jpg">🛒</button>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="product-image"><img src="../Imagenes/paraguas.jpg" alt="Paraguas"></div>
+                <h3>Paraguas</h3>
+                <p class="description">Paraguas de color con impresión o diseño personalizado. Combina funcionalidad con tu marca visible</p>
+                <p class="price">$55</p>
+                <div class="product-buttons">
+                    <button class="btn-view" data-id="paraguas">👁️</button>
+                    <button class="btn-cart" data-name="Paraguas" data-price="55" data-image="../Imagenes/paraguas.jpg">🛒</button>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="product-image"><img src="../Imagenes/postit.jpg" alt="Post-it Personalizados"></div>
+                <h3>Post-it Personalizados</h3>
+                <p class="description">Papelitos post-it personalizados con tu marca o diseño. Perfectos para la oficina y regalos corporativos</p>
+                <p class="price">$12</p>
+                <div class="product-buttons">
+                    <button class="btn-view" data-id="postit">👁️</button>
+                    <button class="btn-cart" data-name="Post-it Personalizados" data-price="12" data-image="../Imagenes/postit.jpg">🛒</button>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="product-image"><img src="../Imagenes/pulseras.jpg" alt="Pulseras"></div>
+                <h3>Pulseras de Tela</h3>
+                <p class="description">Pulseras de tela personalizadas con tu diseño. Ideales para eventos, regalos y promociones</p>
+                <p class="price">$20</p>
+                <div class="product-buttons">
+                    <button class="btn-view" data-id="pulseras">👁️</button>
+                    <button class="btn-cart" data-name="Pulseras de Tela" data-price="20" data-image="../Imagenes/pulseras.jpg">🛒</button>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="product-image"><img src="../Imagenes/tazas.jpg" alt="Tazas"></div>
+                <h3>Tazas Personalizables</h3>
+                <p class="description">Tazas de colores que puedes personalizar con tu diseño. Regalo perfecto y publicidad corporativa</p>
+                <p class="price">$30</p>
+                <div class="product-buttons">
+                    <button class="btn-view" data-id="tazas">👁️</button>
+                    <button class="btn-cart" data-name="Tazas Personalizables" data-price="30" data-image="../Imagenes/tazas.jpg">🛒</button>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+</html>

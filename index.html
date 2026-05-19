@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Imprenta</title>
+    <link rel="stylesheet" type="text/css" href="css/BarraBusqueda.css">
+    <link rel="stylesheet" type="text/css" href="Home.css">
+    <script src="Home.js" defer></script>
+</head>
+
+<body>
+
+    <div id="sidebar">
+        <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="html/products.html">Productos</a></li>
+            <li><a href="html/cart.html">Carrito</a></li>
+            <li><a href="html/Formulario.html">Inicia Sesion</a></li>
+        </ul>
+    </div>
+        <header class="topbar">
+            <div class="topbar-menu"><img src="./Imagenes/barra_a_lateral.png" onclick="toggleSidebar()" alt="Menu" style="cursor:pointer;" width="40" height="40" margin="10px"></div>
+            <div class="topbar-brand">
+                <div class="brand-logo"><Img src="./Imagenes/logo.jpg" height="80px" class="img-logo"></div>
+            </div>
+            <form class="topbar-search" onsubmit="return false;">
+                <input id="product-search" type="search" placeholder="Buscar producto...">
+                <button type="button" onclick="document.getElementById('product-search').dispatchEvent(new Event('input'))">BUSCAR</button>
+            </form>
+            <div class="topbar-actions">
+                <a id="billing-link" href="#" class="topbar-action">Facturacion</a>
+                <a href="html/comments.html" class="topbar-action">Comentarios</a>
+                <a href="html/cart.html" class="topbar-action cart-action">Su Carrito <span id="cart-count">0</span></a>
+            </div>
+        </header><br><br><br>
+    <div class="container" aling="center" style="text-align: center;">
+
+        <div class="slider" id="slider">
+        <div class="slides" id="slides">
+            <div class="slide"><img src="./Imagenes/anuncio4.jpg" alt="Imagen 1"></div>
+            <div class="slide"><img src="./Imagenes/anuncio2.jpeg" alt="Imagen 2"></div>
+            <div class="slide"><img src="./Imagenes/anuncio3.jpeg" alt="Imagen 3"></div>
+        </div>
+    </div>
+
+    <div class="slider-controls">
+        <img src="./Imagenes/Flechita_izquierda.png" onclick="prevSlide()" style="cursor:pointer;" width="40" height="40">
+        <img src="./Imagenes/Flechita_derecha.png" onclick="nextSlide()" style="cursor:pointer;" width="40" height="40">
+    </div><br><br>
+
+    <div class="inicio-section" align="center">
+        <h2>Inicio</h2>
+    </div>
+    <div class="info">
+        <h1>Quienes somos?</h1>
+        <div class="company-section">
+            <div class="company-left">
+                <div class="company-card">
+                    <h2>Diseño e impresión</h2>
+                    <p>Somos una compañía de imprenta creativa y comprometida con la innovación para nuestros clientes.</p>
+                    <p>Ofrecemos diseños personalizados, impresión de productos y atención directa del dueño.</p>
+                    <a class="btn-products" href="html/products.html">productos disponibles</a>
+                </div>
+
+                <div class="details-card">
+                    <h2>Detalles</h2>
+                    <p>Diseño e impresión, en todo lo que se pueda y tenemos la creencia de que es mejor innovar para nuestros clientes.</p>
+                    <ul class="details-list">
+                        <li><span class="detail-icon">📄</span> Página · Compras y ventas minoristas</li>
+                        <li><span class="detail-icon">📍</span> 1ra San Francisco 1223, Monterrey, Mexico</li>
+                        <li><span class="detail-icon">📞</span> 81 3116 6367</li>
+                        <li><span class="detail-icon">✉️</span> my.grebs@gmail.com</li>
+                        <li><span class="detail-icon">📸</span> instagram.com/my.grebs</li>
+                        <li><span class="detail-icon">⭐</span> Recomendado por el 80% (11 opiniones)</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="company-right">
+                <div class="media-card">
+                    <h3>Imágenes y videos</h3>
+                    <div class="media-slider" id="media-slider">
+                        <div class="media-slides" id="media-slides">
+                            <div class="media-slide"><img src="./Imagenes/anuncio5.jpg" alt="Imagen 1"></div>
+                            <div class="media-slide"><img src="./Imagenes/2026-01-11_20.42.12.png" alt="Imagen 2"></div>
+                            <div class="media-slide"><img src="./Imagenes/2026-01-11_20.44.47.png" alt="Imagen 3"></div>
+                            <div class="media-slide media-video">Video</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="location-card small-location-card">
+                    <div class="location-map">
+                        <iframe src="https://www.google.com/maps?q=1ra+San+Francisco+1223,+Monterrey,+Mexico&output=embed" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                    <div class="location-details">
+                        <h2>Ubicación</h2>
+                        <p>1ra San Francisco 1223, 64550 Monterrey, Mexico</p>
+                        <a class="btn-directions" href="https://maps.app.goo.gl/b3a1g1c3AnUfyWha8" target="_blank">Cómo llegar</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div><br><br>
+
+
+    <div class="products-section" aling="center">
+        <h2>Productos</h2>
+    </div><br><br>
+        <div class="products-grid">
+            <div class="product-card">
+                <div class="product-image"><img src="./Imagenes/Camisa.jpeg" alt="Producto 1"></div>
+                <h3>Camisas con Estampado</h3>
+                <p class="description">Camisa de algodón con estampado único y perzonalizacion completa (la imagen es tu elección)</p>
+                <p class="price">$150</p>
+                <div class="product-buttons">
+                    <button class="btn-view" data-id="camisa">👁️</button>
+                    <button class="btn-cart" data-name="Camisas con Estampado" data-price="150" data-image="./Imagenes/Camisa.jpeg">🛒</button>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <div class="product-image"><img src="./Imagenes/sudadera.jpeg" alt="Producto 2"></div>
+                <h3>Sudadera con Estampado</h3>
+                <p class="description">sudadera de lana con estampado único y personalizacion completa (la imagen es tu elección)</p>
+                <p class="price"><span class="old-price"></span> $500</p>
+                <div class="product-buttons">
+                    <button class="btn-view" data-id="sudadera">👁️</button>
+                    <button class="btn-cart" data-name="Sudadera con Estampado" data-price="500" data-image="./Imagenes/sudadera.jpeg">🛒</button>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <div class="product-image"><img src="./Imagenes/gorra.jpeg" alt="Producto 3"></div>
+                <h3>Gorra con Estampado</h3>
+                <p class="description">Gorra de algodón con estampado único y personalizacion completa (la imagen es tu elección)</p>
+                <p class="price"><span class="old-price"></span> $100</p>
+                <div class="product-buttons">
+                    <button class="btn-view" data-id="gorra">👁️</button>
+                    <button class="btn-cart" data-name="Gorra con Estampado" data-price="100" data-image="./Imagenes/gorra.jpeg">🛒</button>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <div class="product-image"><img src="./Imagenes/bandera.jpeg" alt="Producto 4"></div>
+                <h3>Bandera</h3>
+                <p class="description">Bandera con estampado único y personalizacion completa (la imagen es tu elección)</p>
+                <p class="price"><span class="old-price"></span> $200</p>
+                <div class="product-buttons">
+                    <button class="btn-view" data-id="bandera">👁️</button>
+                    <button class="btn-cart" data-name="Bandera" data-price="200" data-image="./Imagenes/bandera.jpeg">🛒</button>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <div class="product-image"><img src="./Imagenes/chaquetamesqui.jpeg" alt="Producto 4"></div>
+                <h3>Chaqueta de Mesclilla</h3>
+                <p class="description">Chaquetas de mesquite con diseño único y personalización completa (la imagen es tu elección)</p>
+                <p class="price"><span class="old-price"></span> $600</p>
+                <div class="product-buttons">
+                    <button class="btn-view" data-id="chaqueta">👁️</button>
+                    <button class="btn-cart" data-name="Chaqueta de Mesclilla" data-price="600" data-image="./Imagenes/chaquetamesqui.jpeg">🛒</button>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <div class="product-image"><img src="./Imagenes/almohada.jpeg" alt="Producto 4"></div>
+                <h3>Almohada</h3>
+                <p class="description">Almohada de alta calidad con diseño único y personalización completa (diseño es tu elección)</p>
+                <p class="price"><span class="old-price"></span> $100</p>
+                <div class="product-buttons">
+                    <button class="btn-view" data-id="almohada">👁️</button>
+                    <button class="btn-cart" data-name="Almohada" data-price="100" data-image="./Imagenes/almohada.jpeg">🛒</button>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <div class="product-image"><img src="./Imagenes/termo.jpeg" alt="Producto 5"></div>
+                <h3>Termo</h3>
+                <p class="description">Termo de acero inoxidable con estampado único y personalización completa (diseño es tu elección)</p>
+                <p class="price"><span class="old-price"></span> $80</p>
+                <div class="product-buttons">
+                    <button class="btn-view" data-id="termo">👁️</button>
+                    <button class="btn-cart" data-name="Termo" data-price="80" data-image="./Imagenes/termo.jpeg">🛒</button>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <div class="product-image"><img src="./Imagenes/Libreta.jpeg" alt="Producto 5"></div>
+                <h3>Libreta</h3>
+                <p class="description">Libreta de calidad con diseño único y personalización completa (diseño es tu elección)</p>
+                <p class="price"><span class="old-price"></span> $20</p>
+                <div class="product-buttons">
+                    <button class="btn-view" data-id="libreta">👁️</button>
+                    <button class="btn-cart" data-name="Libreta" data-price="20" data-image="./Imagenes/Libreta.jpeg">🛒</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

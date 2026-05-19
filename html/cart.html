@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrito - Imprenta</title>
+    <link rel="stylesheet" type="text/css" href="../css/BarraBusqueda.css">
+    <link rel="stylesheet" type="text/css" href="../css/Carrito.css">
+    <script src="../js/Carrito.js" defer></script>
+</head>
+<body>
+    <div class="cart-page">
+        <header class="cart-header">
+            <div>
+                <h1>Carrito de Compras</h1>
+                <p>Revisa tus productos y completa tu compra.</p>
+            </div>
+            <a class="cart-back" href="../index.html">← Volver a la tienda</a>
+        </header>
+
+        <section class="cart-content">
+            <div id="cart-items" class="cart-items"></div>
+            <aside class="cart-summary">
+                <h2>Resumen</h2>
+                <p>Total de artículos: <span id="cart-total-count">0</span></p>
+                <p>Total a pagar: <strong>$<span id="cart-total-price">0.00</span></strong></p>
+                <label for="payment-method">Forma de pago</label>
+                <select id="payment-method" class="payment-method-select">
+                    <option value="efectivo">Efectivo (Presencial)</option>
+                    <option value="tarjeta">Tarjeta</option>
+                    <option value="transferencia">Transferencia</option>
+                </select>
+                <button id="clear-cart" class="btn-cart">Vaciar carrito</button>
+                <button id="checkout-cart" class="btn-cart">Finalizar pedido</button>
+            </aside>
+        </section>
+    </div>
+</body>
+</html>
